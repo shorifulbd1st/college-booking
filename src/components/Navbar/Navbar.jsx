@@ -6,7 +6,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, handleLogout } = useContext(AuthContext);
-
+  console.log(user);
   const toggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
   return (
@@ -179,7 +179,7 @@ const Navbar = () => {
                     </Tooltip>
                     <button
                       onClick={handleLogout}
-                      className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+                      className="px-4 py-3 cursor-pointer text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-500"
                     >
                       Logout
                     </button>
@@ -188,13 +188,13 @@ const Navbar = () => {
                   <div className="flex gap-2">
                     <Link
                       to="/registration"
-                      className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+                      className="px-4 py-3 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-500"
                     >
                       Register
                     </Link>
                     <Link
                       to="/login"
-                      className="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-700"
+                      className="px-4 py-3 text-sm font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-700"
                     >
                       Login
                     </Link>

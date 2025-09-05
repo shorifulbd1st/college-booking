@@ -15,37 +15,38 @@ const Register = () => {
     e.preventDefault();
     const form = new FormData(e.target);
     const name = form.get("name");
-    const photo = form.get("photo");
+    // const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    const cPassword = form.get("cPassword");
+    // const cPassword = form.get("cPassword");
 
-    const hasUppercase = /.*[A-Z].*/;
-    const hasLowercase = /.*[a-z].*/;
-    const hasValidLength = /.{6,}/;
+    // const hasUppercase = /.*[A-Z].*/;
+    // const hasLowercase = /.*[a-z].*/;
+    // const hasValidLength = /.{6,}/;
 
-    if (!hasUppercase.test(password)) {
-      setError({ upperCase: "must have one uppercase letter" });
-      return;
-    }
-    if (!hasLowercase.test(password)) {
-      setError({ lowerCase: "must have one lowercase letter" });
-      return;
-    }
-    if (!hasValidLength.test(password)) {
-      setError({ length: "must be more than 6 character" });
-      return;
-    }
-    if (password != cPassword) {
-      setError({ password: "password and confirm password don't match" });
-      return;
-    }
+    // if (!hasUppercase.test(password)) {
+    //   setError({ upperCase: "must have one uppercase letter" });
+    //   return;
+    // }
+    // if (!hasLowercase.test(password)) {
+    //   setError({ lowerCase: "must have one lowercase letter" });
+    //   return;
+    // }
+    // if (!hasValidLength.test(password)) {
+    //   setError({ length: "must be more than 6 character" });
+    //   return;
+    // }
+    // if (password != cPassword) {
+    //   setError({ password: "password and confirm password don't match" });
+    //   return;
+    // }
 
     handleRegister(email, password)
       .then((result) => {
-        const newUser = result.user;
+        // const newUser = result.user;
         notify("success", `Welcome ${name} your registration successful`);
-
+        // navigate("/");
+        const photo = "https://i.ibb.co.com/Qj9bZsGH/download.png";
         updateUserProfile({ displayName: name, photoURL: photo }).then(() =>
           navigate("/")
         );
@@ -54,6 +55,7 @@ const Register = () => {
         notify("error", "Your account was not created successfully")
       );
   };
+
   return (
     // <div className="w-11/12 mx-auto">
     //   <div className="border-2 border-blue-500 flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
