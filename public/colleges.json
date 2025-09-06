@@ -48,8 +48,8 @@
         "message": 2.3
       },
       {
-        "image": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/admin-3.jpg",
-        "instructorImage": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/admin-3.jpg",
+        "image": "https://media.geeksforgeeks.org/wp-content/uploads/20240528150353/How-Data-Science-Works.webp",
+        "instructorImage": "https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60",
         "instructorName": "Dr. Karim",
         "courseName": "Data Science Fundamentals",
         "totalStudent": 800,

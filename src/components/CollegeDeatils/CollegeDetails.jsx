@@ -5,8 +5,10 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import LoadingSpinner from "../Loading/LoadingSpinner";
 import TopTravelDestinations from "../copy/TopTravelDestinations";
 import DetailsBanner from "./DetailsBanner";
-
+import { PiStudentBold } from "react-icons/pi";
+import { TbMessageCircleHeart } from "react-icons/tb";
 import CountUp from "react-countup";
+import HeadingDetails from "./HeadingDetails";
 const CollegeDetails = () => {
   const { id } = useParams();
   console.log(id);
@@ -130,7 +132,7 @@ const CollegeDetails = () => {
                     <div className="stat-value">
                       <CountUp
                         className="text-green-700 text-6xl"
-                        end={10}
+                        end={30}
                         duration={10}
                       />
                       <span className="text-red-700 text-6xl">+</span>
@@ -169,6 +171,68 @@ const CollegeDetails = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        <HeadingDetails
+          title="Free Courses"
+          subtitle="Explore a variety of free courses to boost skills, expand knowledge, and achieve academic and professional success."
+        ></HeadingDetails>
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {freeCourses?.map((course, i) => (
+            <div
+              key={i}
+              className="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800"
+            >
+              <img
+                className="object-cover w-full h-64"
+                src={course.image}
+                alt="Article"
+              />
+
+              <div className="p-2">
+                <div>
+                  <div className="block mt-0 text-xl font-bold text-green-800  transition-colors duration-300 transform dark:text-white hover:text-gray-600">
+                    {course.courseName}
+                  </div>
+                  <p className="mt-2 text-sm text-gray-600 dark:text-gray-400"></p>
+                </div>
+
+                <div className="mt-4">
+                  <div className="flex items-center">
+                    <div className="flex items-center">
+                      <img
+                        className="object-cover h-10 rounded-full"
+                        src={course.instructorImage}
+                        alt="Avatar"
+                      />
+                      <a
+                        href="#"
+                        className="mx-2 font-semibold text-gray-700 dark:text-gray-200"
+                      >
+                        Jone Doe
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-between px-2">
+                  <div className="mt-4 text-xl flex justify-start items-center gap-2">
+                    <PiStudentBold className="text-green-700" />
+                    <span className="text-md text-gray-400">
+                      {course.totalStudent}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="mt-4 text-xl flex justify-start items-center gap-2">
+                      <TbMessageCircleHeart className="text-green-700" />
+                      <span className="text-md text-gray-400">
+                        {course.message}k
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
       </div>
     </section>
