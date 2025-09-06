@@ -7,6 +7,7 @@ import Register from "../components/Page/Authentication/Register";
 import Colleges from "../components/Colleges/Colleges";
 import Admission from "../components/Admission/Admission";
 import MyCollege from "../components/MyCollege/MyCollege";
+import CollegeDetails from "../components/CollegeDeatils/CollegeDetails";
 
 const router = createBrowserRouter([
   {
@@ -30,19 +31,23 @@ const router = createBrowserRouter([
         path: "colleges",
         element: <Colleges></Colleges>,
         // loader: async () => {
-        //   const collegeData = await fetch("/colleges.json");
-        //   const colleges = await collegeData.json();
-
+        //   const collegesData = await fetch("/colleges.json");
+        //   const colleges = await collegesData.json();
+        //   console.log(colleges);
         //   return { colleges };
         // },
       },
-      {
-        path: "admission",
-        element: <Admission></Admission>,
-      },
+      // {
+      //   path: "admission",
+      //   element: <Admission></Admission>,
+      // },
       {
         path: "my-college",
         element: <MyCollege></MyCollege>,
+      },
+      {
+        path: "college-details/:id",
+        element: <CollegeDetails></CollegeDetails>,
       },
     ],
   },

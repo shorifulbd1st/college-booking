@@ -1,3 +1,4 @@
+
 [
   {
     "id": 1,
@@ -7,76 +8,125 @@
     "admissionDate": "2025-06-20",
     "researchCount": 12,
     "events": ["Innovation Fair","Tech Carnival", "Research Expo"],
-    "sports": ["Cricket", "Football", "Kabaddi", "Badminton"]
-  },
-  {
-    "id": 2,
-    "name": "Khulna Science College",
-    "image": "https://images.pexels.com/photos/7972556/pexels-photo-7972556.jpeg",
-    "rating": 4.5,
-    "admissionDate": "2025-07-01",
-    "researchCount": 9,
-    "events": ["Career Summit", "Science Fair", "Math Olympiad"],
-    "sports": ["Cricket", "Basketball", "Hockey", "Swimming"]
-  },
-  {
-    "id": 3,
-    "name": "Sylhet Science Academy",
-    "image": "https://images.pexels.com/photos/7972512/pexels-photo-7972512.jpeg",
-    "rating": 4.8,
-    "admissionDate": "2025-07-15",
-    "researchCount": 14,
-    "events": ["Tech Expo", "Cultural Fest","Robotics Workshop"],
-    "sports": ["Football", "Cricket", "Swimming", "Volleyball", "Chess"]
-  },
-  {
-    "id": 4,
-    "name": "Barishal Science Academy College",
-    "image": "https://images.pexels.com/photos/33755543/pexels-photo-33755543.jpeg",
-    "rating": 4.4,
-    "admissionDate": "2025-07-05",
-    "researchCount": 8,
-    "events": ["Innovation Expo", "Youth Leadership Summit"],
-    "sports": ["Kabaddi", "Football", "Cricket", "Basketball"]
-  },
-  {
-    "id": 5,
-    "name": "Jessore Science and Technology",
-    "image": "https://images.pexels.com/photos/7972653/pexels-photo-7972653.jpeg",
-    "rating": 4.6,
-    "admissionDate": "2025-07-18",
-    "researchCount": 12,
-    "events": ["Tech Carnival", "Book Fair", "Green Bangladesh"],
-    "sports": ["Cricket", "Kabaddi", "Athletics", "Chess", "Football"]
-  },
-  {
-    "id": 6,
-    "name": "Mymensingh Science College",
-    "image": "https://images.pexels.com/photos/29229904/pexels-photo-29229904.jpeg",
-    "rating": 4.3,
-    "admissionDate": "2025-08-01",
-    "researchCount": 8,
-    "events": [ "Science Olympiad", "Career Counseling"],
-    "sports": ["Cricket", "Football", "Hockey", "Badminton"]
-  },
-  {
-    "id": 7,
-    "name": "Cumilla Science Academy",
-    "image": "https://images.pexels.com/photos/29646491/pexels-photo-29646491.jpeg",
-    "rating": 4.9,
-    "admissionDate": "2025-07-25",
-    "researchCount": 9,
-    "events": ["Tech Hackathon", "AI Conference"],
-    "sports": ["Basketball", "Football", "Cricket", "Swimming"]
-  },
-  {
-    "id": 8,
-    "name": "Rajshahi Science Academy College",
-    "image": "https://images.pexels.com/photos/5553944/pexels-photo-5553944.jpeg",
-    "rating": 4.5,
-    "admissionDate": "2025-08-10",
-    "researchCount": 10,
-    "events": ["Research Conference", "Innovation Fair"],
-    "sports": ["Cricket", "Football", "Kabaddi", "Badminton"]
+    "sports": ["Cricket", "Football", "Kabaddi", "Badminton"],
+
+    "title": "Explore Your Creativity and Talent with Green Valley Science College",
+    "subtitle": "Unleash your imagination and develop unique skills through engaging courses, inspiring faculty, and an environment that nurtures your dreams into reality.",
+
+    "campusInformation": {
+      "image": "https://images.pexels.com/photos/5554240/pexels-photo-5554240.jpeg",
+      "description": "Green Valley Science College offers a vibrant academic environment with modern classrooms, advanced laboratories, research centers, and cultural hubs that encourage students to grow both academically and socially.",
+      "programs": [
+        "Science",
+        "Arts",
+        "Commerce",
+        "Graduate Programs",
+        "Doctoral Degrees",
+        "Alumni & Giving",
+        "Undergraduate Programs",
+        "International Hubs",
+        "Global Students"
+      ]
+    },
+
+    "freeCourses": [
+      {
+        "image": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/courses-4.jpg",
+        "instructorImage": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "instructorName": "Dr. Rahman",
+        "courseName": "Introduction to Artificial Intelligence",
+        "totalStudent": 1200,
+        "message": 1.2
+      },
+
+      {
+        "image": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/courses-3.jpg",
+        "instructorImage": "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "instructorName": "Prof. Jahanara Akter",
+        "courseName": "Basics of Web Development",
+        "totalStudent": 950,
+        "message": 2.3
+      },
+      {
+        "image": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/admin-3.jpg",
+        "instructorImage": "https://templates.hibootstrap.com/sanu/default/assets/images/courses/admin-3.jpg",
+        "instructorName": "Dr. Karim",
+        "courseName": "Data Science Fundamentals",
+        "totalStudent": 800,
+        "message": 3.4
+      }
+    ],
+
+    "campusLife": [
+      {
+        "image": "https://images.pexels.com/photos/1546542/pexels-photo-1546542.jpeg",
+        "title": "Art & Culture",
+        "subtitle": "A celebration of diversity, music, drama, and art."
+      },
+      {
+        "image": "https://images.pexels.com/photos/248559/pexels-photo-248559.jpeg",
+        "title": "Athletics & Fitness",
+        "subtitle": "Encouraging healthy competition and teamwork."
+      },
+      {
+        "image": "https://images.pexels.com/photos/4861395/pexels-photo-4861395.jpeg",
+        "title": "Student Clubs & Societies",
+        "subtitle": "Opportunities to explore interests, skills, and leadership."
+      }
+    ],
+
+    "healthCare": [
+      {
+        "image": "https://images.pexels.com/photos/8617579/pexels-photo-8617579.jpeg",
+        "title": "24/7 Medical Service",
+        "description": "On-campus healthcare center with professional doctors and nurses."
+      },
+      {
+        "image": "https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg",
+        "title": "Mental Health Support",
+        "description": "Counseling and guidance services to ensure student well-being."
+      },
+      {
+        "image": "https://images.pexels.com/photos/6004689/pexels-photo-6004689.jpeg",
+        "title": "Nutrition & Wellness",
+        "description": "Guidance on healthy eating habits and lifestyle management."
+      }
+    ],
+
+    "eventsDetails": [
+      {
+        "image": "https://images.pexels.com/photos/7869079/pexels-photo-7869079.jpeg",
+        "date": "2025-09-15",
+        "title": "Annual Science Fair 2025"
+      },
+      {
+        "image": "https://news.cornell.edu/sites/default/files/styles/story_thumbnail_xlarge/public/2019-04/0411_programming.jpg?itok=S6FBUTNZ",
+        "date": "2025-10-10",
+        "title": "Programming Contest"
+      },
+      {
+        "image": "https://news.cgtn.com/news/3d3d414f34596a4e78457a6333566d54/img/ecd40f9ea80f4ceeb64549054d8aacf3/ecd40f9ea80f4ceeb64549054d8aacf3.jpg",
+        "date": "2025-11-05",
+        "title": "Mathematical Olympiad"
+      }
+    ],
+
+    "researchPapers": [
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwG0mRdUgcJRxRyaBFzqd4PXrAeZ8UDDeQgg&s",
+        "title": "Sustainable Agriculture in Coastal Bangladesh",
+        "description": "Research on how modern agricultural methods can improve food security in coastal regions."
+      },
+      {
+        "image": "https://www.orangemantra.com/blog/wp-content/uploads/2023/12/ai-in-education.png",
+        "title": "AI in Education",
+        "description": "Study on how Artificial Intelligence can improve personalized learning for students."
+      },
+      {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrRFdlWVM1TSEmJMxBAoq1bw7VMhdZB-4nFA&s",
+        "title": "Renewable Energy Solutions",
+        "description": "Exploring new energy technologies to reduce carbon footprint."
+      }
+    ]
   }
 ]

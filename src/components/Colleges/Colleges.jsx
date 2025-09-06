@@ -18,9 +18,9 @@ const Colleges = () => {
   });
 
   if (isPending) {
-    <LoadingSpinner></LoadingSpinner>;
+    return <LoadingSpinner></LoadingSpinner>;
   }
-  // console.log(colleges);
+  console.log(colleges);
   return (
     <section className="w-11/12 mx-auto my-8">
       <Heading></Heading>

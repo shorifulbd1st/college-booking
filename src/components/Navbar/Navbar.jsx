@@ -105,7 +105,7 @@ const Navbar = () => {
                 >
                   Colleges
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/admission"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md transition-colors ${
@@ -116,7 +116,7 @@ const Navbar = () => {
                   }
                 >
                   Admission
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   to="/my-college"
                   className={({ isActive }) =>
