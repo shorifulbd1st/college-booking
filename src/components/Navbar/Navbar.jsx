@@ -118,7 +118,7 @@ const Navbar = () => {
                   Admission
                 </NavLink>
                 <NavLink
-                  to="/about"
+                  to="/my-college"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md transition-colors ${
                       isActive
@@ -159,11 +159,11 @@ const Navbar = () => {
               </div>
 
               {/* User Actions */}
-              <div className="flex items-center mt-4 lg:mt-0 lg:ml-6 gap-3">
+              <div className="flex cursor-pointer items-center mt-4 lg:mt-0 lg:ml-6 gap-3">
                 {user && user?.email ? (
                   <div className="flex items-center gap-3">
                     <a id="not-clickable">
-                      <div className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
+                      <div className=" w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
                         <img
                           referrerPolicy="no-referrer"
                           src={user?.photoURL}
@@ -173,7 +173,7 @@ const Navbar = () => {
                       </div>
                     </a>
                     <Tooltip anchorSelect="#not-clickable">
-                      <div className="px-2 py-1 rounded text-sm">
+                      <div className="px-2 py-1 rounded text-sm cursor-pointer">
                         {user?.displayName}
                       </div>
                     </Tooltip>

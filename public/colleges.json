@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Rangamati Science and Technology",
+    "image": "https://images.pexels.com/photos/7713548/pexels-photo-7713548.jpeg",
+    "rating": 4.7,
+    "admissionDate": "2025-06-20",
+    "researchCount": 12,
+    "events": ["Innovation Fair","Tech Carnival", "Research Expo"],
+    "sports": ["Cricket", "Football", "Kabaddi", "Badminton"]
+  },
+  {
+    "id": 2,
+    "name": "Khulna Science College",
+    "image": "https://images.pexels.com/photos/7972556/pexels-photo-7972556.jpeg",
+    "rating": 4.5,
+    "admissionDate": "2025-07-01",
+    "researchCount": 9,
+    "events": ["Career Summit", "Science Fair", "Math Olympiad"],
+    "sports": ["Cricket", "Basketball", "Hockey", "Swimming"]
+  },
+  {
+    "id": 3,
+    "name": "Sylhet Science Academy",
+    "image": "https://images.pexels.com/photos/7972512/pexels-photo-7972512.jpeg",
+    "rating": 4.8,
+    "admissionDate": "2025-07-15",
+    "researchCount": 14,
+    "events": ["Tech Expo", "Cultural Fest","Robotics Workshop"],
+    "sports": ["Football", "Cricket", "Swimming", "Volleyball", "Chess"]
+  },
+  {
+    "id": 4,
+    "name": "Barishal Science Academy College",
+    "image": "https://images.pexels.com/photos/33755543/pexels-photo-33755543.jpeg",
+    "rating": 4.4,
+    "admissionDate": "2025-07-05",
+    "researchCount": 8,
+    "events": ["Innovation Expo", "Youth Leadership Summit"],
+    "sports": ["Kabaddi", "Football", "Cricket", "Basketball"]
+  },
+  {
+    "id": 5,
+    "name": "Jessore Science and Technology",
+    "image": "https://images.pexels.com/photos/7972653/pexels-photo-7972653.jpeg",
+    "rating": 4.6,
+    "admissionDate": "2025-07-18",
+    "researchCount": 12,
+    "events": ["Tech Carnival", "Book Fair", "Green Bangladesh"],
+    "sports": ["Cricket", "Kabaddi", "Athletics", "Chess", "Football"]
+  },
+  {
+    "id": 6,
+    "name": "Mymensingh Science College",
+    "image": "https://images.pexels.com/photos/29229904/pexels-photo-29229904.jpeg",
+    "rating": 4.3,
+    "admissionDate": "2025-08-01",
+    "researchCount": 8,
+    "events": [ "Science Olympiad", "Career Counseling"],
+    "sports": ["Cricket", "Football", "Hockey", "Badminton"]
+  },
+  {
+    "id": 7,
+    "name": "Cumilla Science Academy",
+    "image": "https://images.pexels.com/photos/29646491/pexels-photo-29646491.jpeg",
+    "rating": 4.9,
+    "admissionDate": "2025-07-25",
+    "researchCount": 9,
+    "events": ["Tech Hackathon", "AI Conference"],
+    "sports": ["Basketball", "Football", "Cricket", "Swimming"]
+  },
+  {
+    "id": 8,
+    "name": "Rajshahi Science Academy College",
+    "image": "https://images.pexels.com/photos/5553944/pexels-photo-5553944.jpeg",
+    "rating": 4.5,
+    "admissionDate": "2025-08-10",
+    "researchCount": 10,
+    "events": ["Research Conference", "Innovation Fair"],
+    "sports": ["Cricket", "Football", "Kabaddi", "Badminton"]
+  }
+]

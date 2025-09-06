@@ -2,8 +2,25 @@ import React, { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const SocialLogin = () => {
+  // const { handleGoogleLogin, notify } = useContext(AuthContext);
+  // const navigate = useNavigate();
+  // const location = useLocation();
+  // const from = location.state || "/";
+  // const handleGoogleSignIn = () => {
+  //   handleGoogleLogin()
+  //     .then((result) => {
+  //       // console.log(result.user)
+  //       notify("success", "Google Login successfully");
+  //       navigate(from);
+  //     })
+  //     .catch((error) => {
+  //       // console.log(error.message)
+  //     });
+  // };
+  const axiosPublic = useAxiosPublic();
   const { handleGoogleLogin, notify } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -11,9 +28,15 @@ const SocialLogin = () => {
   const handleGoogleSignIn = () => {
     handleGoogleLogin()
       .then((result) => {
-        // console.log(result.user)
         notify("success", "Google Login successfully");
-        navigate(from);
+        const userInfo = {
+          name: result.user?.displayName,
+          email: result.user?.email,
+          photo: result.user?.photoURL,
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          navigate(from);
+        });
       })
       .catch((error) => {
         // console.log(error.message)
