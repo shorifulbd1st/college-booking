@@ -11,6 +11,7 @@ import CountUp from "react-countup";
 import HeadingDetails from "./HeadingDetails";
 
 import { CiCalendarDate } from "react-icons/ci";
+import StudentResearch from "./StudentResearch";
 const CollegeDetails = () => {
   const { id } = useParams();
   console.log(id);
@@ -257,6 +258,7 @@ const CollegeDetails = () => {
             </div>
           ))}
         </section>
+        <StudentResearch researchPapers={researchPapers}></StudentResearch>
       </div>
     </section>
   );

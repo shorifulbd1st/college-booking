@@ -16,14 +16,35 @@ const Banner = () => {
     "International Hubs",
     "Global Students",
   ];
-  const campusImage =
-    "https://images.pexels.com/photos/5554240/pexels-photo-5554240.jpeg";
+  const images = [
+    {
+      src: "https://images.pexels.com/photos/7713548/pexels-photo-7713548.jpeg",
+      alt: "Slide 1",
+    },
+    {
+      src: "https://images.pexels.com/photos/7972653/pexels-photo-7972653.jpeg",
+      alt: "Slide 2",
+    },
+    {
+      src: "https://images.pexels.com/photos/7972556/pexels-photo-7972556.jpeg",
+      alt: "Slide 3",
+    },
+    {
+      src: "https://images.pexels.com/photos/7972512/pexels-photo-7972512.jpeg",
+      alt: "Slide 4",
+    },
+    {
+      src: "https://images.pexels.com/photos/33755543/pexels-photo-33755543.jpeg",
+      alt: "Slide 5",
+    },
+  ];
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-2 mx-auto">
         <div className="lg:-mx-6 lg:flex lg:items-center lg:flex-row-reverse">
           <div className="object-cover object-center lg:w-1/2 lg:mx-5 w-full h-96 rounded-lg lg:h-[30rem] py-0">
-            <NewSlider></NewSlider>
+            <NewSlider images={images}></NewSlider>
           </div>
 
           {/* </div> */}

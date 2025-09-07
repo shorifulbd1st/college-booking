@@ -25,7 +25,9 @@ const HeadingDetails = ({ title, subtitle }) => {
       </div>
 
       {/* Subtitle */}
-      <p className="mt-3 text-gray-600 font-semibold">{subtitle}</p>
+      <p className="mt-3 text-gray-600 font-semibold w-8/12 mx-auto">
+        {subtitle}
+      </p>
 
       {/* Decorative Line */}
       <div className="flex items-center justify-center mt-4">
