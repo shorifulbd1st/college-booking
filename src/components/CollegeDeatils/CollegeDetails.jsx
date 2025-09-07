@@ -12,6 +12,8 @@ import HeadingDetails from "./HeadingDetails";
 
 import { CiCalendarDate } from "react-icons/ci";
 import StudentResearch from "./StudentResearch";
+import HealthCare from "./HealthCare";
+import CampusLife from "./CampusLife";
 const CollegeDetails = () => {
   const { id } = useParams();
   console.log(id);
@@ -259,6 +261,8 @@ const CollegeDetails = () => {
           ))}
         </section>
         <StudentResearch researchPapers={researchPapers}></StudentResearch>
+        <HealthCare healthCare={healthCare}></HealthCare>
+        <CampusLife campusLife={campusLife}></CampusLife>
       </div>
     </section>
   );
