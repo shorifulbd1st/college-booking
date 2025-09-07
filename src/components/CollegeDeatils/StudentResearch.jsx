@@ -5,7 +5,7 @@ const StudentResearch = ({ researchPapers }) => {
   return (
     <div className="">
       <HeadingDetails
-        title={"Student Research & Innovations"}
+        title={" Research & Innovations"}
         subtitle={
           "Discover groundbreaking research papers authored by our talented students, showcasing innovation, knowledge, and contributions that inspire academic excellence and future discoveries."
         }

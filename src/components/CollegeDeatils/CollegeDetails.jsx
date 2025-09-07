@@ -63,7 +63,7 @@ const CollegeDetails = () => {
   // };
 
   return (
-    <section className="">
+    <section className="  border-red-500">
       <DetailsBanner
         title={title}
         image={image}

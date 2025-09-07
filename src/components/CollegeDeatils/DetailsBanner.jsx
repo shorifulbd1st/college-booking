@@ -3,7 +3,7 @@ import React from "react";
 const DetailsBanner = ({ title, image, text }) => {
   return (
     <div
-      className="w-full bg-center bg-cover h-[48rem] overflow-hidden"
+      className="w-full px-2 bg-center bg-cover h-[48rem] overflow-hidden"
       style={{
         backgroundImage: `url(${image})`,
       }}

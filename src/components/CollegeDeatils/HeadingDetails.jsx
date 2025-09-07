@@ -3,12 +3,6 @@ import React from "react";
 const HeadingDetails = ({ title, subtitle }) => {
   return (
     <div className="text-center my-8">
-      {/* Small Tag */}
-      {/* <p className="inline-block px-4 py-1 text-sm font-medium text-purple-700 bg-purple-100 rounded-full">
-        TOP COLLEGES
-      </p> */}
-
-      {/* Main Title */}
       <div className="relative my-5">
         <div className="text-center mb-5 relative">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -16,7 +10,7 @@ const HeadingDetails = ({ title, subtitle }) => {
           </div>
           <div className="relative z-10 inline-flex items-center space-x-4 justify-center">
             <span className="h-[2px] w-36 mt-2 bg-gradient-to-r from-transparent via-[#FF014F] to-transparent"></span>
-            <h2 className="text-xl md:text-4xl font-bold mt-0 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            <h2 className="text-sm md:text-4xl font-bold mt-0 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">
               {title}
             </h2>
             <span className="h-[2px] mt-3 w-36 bg-gradient-to-r from-transparent via-[#FF014F] to-transparent"></span>
@@ -25,7 +19,7 @@ const HeadingDetails = ({ title, subtitle }) => {
       </div>
 
       {/* Subtitle */}
-      <p className="mt-3 text-gray-600 font-semibold w-8/12 mx-auto">
+      <p className="mt-3 text-gray-600 font-semibold lg:w-8/12 mx-auto">
         {subtitle}
       </p>
 

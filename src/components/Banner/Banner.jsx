@@ -51,7 +51,7 @@ const Banner = () => {
           <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0  border-red-600">
             <p className="text-5xl font-semibold text-red-500 ">“</p>
 
-            <h1 className="text-2xl italic border-red-600 -mt-5 ml-4 font-bold text-green-800 dark:text-white lg:text-4xl">
+            <h1 className="text-2xl italic border-red-600 lg:-mt-5 lg:ml-4 font-bold text-green-800 dark:text-white lg:text-4xl">
               Find Your Dream College
             </h1>
 
@@ -159,7 +159,7 @@ const Banner = () => {
               </button>
               <Link
                 to="/admission"
-                className="px-6 py-2 mt-0 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer inline-block"
+                className="px-6 py-2 mt-3 lg:mt-0 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer inline-block"
               >
                 Start your application
               </Link>
