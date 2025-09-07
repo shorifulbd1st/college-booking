@@ -9,11 +9,27 @@ import { Helmet } from "react-helmet";
 import "react-datepicker/dist/react-datepicker.css";
 import TableRow from "./TableRow";
 import { AuthContext } from "../../providers/AuthProvider";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import LoadingSpinner from "../Loading/LoadingSpinner";
 const MyApplyColleges = () => {
   // console.log('booking rooms', bookingRooms)
   const { user } = useContext(AuthContext);
-  console.log(user?.email);
+  // console.log(user?.email);
+  const axiosPublic = useAxiosPublic();
+  const { data: colleges = [], isPending } = useQuery({
+    queryKey: ["colleges", user?.email],
+    queryFn: async () => {
+      const res = await axiosPublic.get(`/colleges/${user?.email}`);
+      return res.data;
+    },
+    // enabled: user?.email,
+  });
 
+  if (isPending) {
+    return <LoadingSpinner />;
+  }
+  console.log(colleges);
   return (
     <div>
       <div className="container px-4 mx-auto my-10">
@@ -22,7 +38,7 @@ const MyApplyColleges = () => {
             Total Applications
           </h2>
           <span className="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">
-            {/* {bookingRooms.length} */}
+            {colleges.length}
           </span>
         </div>
 
@@ -119,15 +135,15 @@ const MyApplyColleges = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-                    {/* {bookingRooms &&
-                      bookingRooms.map((room, idx) => (
+                    {colleges &&
+                      colleges.map((college, idx) => (
                         <TableRow
                           key={idx}
-                          room={room}
-                          setBookingRooms={setBookingRooms}
-                          allBookingRoom={allBookingRoom}
+                          college={college}
+                          // setBookingRooms={setBookingRooms}
+                          // allBookingRoom={allBookingRoom}
                         ></TableRow>
-                      ))} */}
+                      ))}
                   </tbody>
                 </table>
               </div>

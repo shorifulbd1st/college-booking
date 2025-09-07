@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import LoadingSpinner from "../Loading/LoadingSpinner";
 import TopTravelDestinations from "../copy/TopTravelDestinations";
@@ -177,19 +177,20 @@ const CollegeDetails = () => {
                   </div>
                 </div>
                 <div className="my-4">
-                  <button class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 flex justify-center items-center">
+                  <button className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 flex justify-center items-center">
                     <span className="text-3xl mr-2">
                       <CiCalendarDate />
                     </span>
                     Admission Date : {admissionDate}
                   </button>
                 </div>
-                <button
-                  onClick={() => setIsOpen(true)}
+                <Link
+                  // onClick={() => setIsOpen(true)}
+                  to="/admission"
                   class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
                 >
                   Start your application
-                </button>
+                </Link>
               </div>
             </div>
           </div>
