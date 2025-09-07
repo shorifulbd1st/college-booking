@@ -1,10 +1,11 @@
 import React from "react";
 import Review from "../Review/Review";
+import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
-    <div>
-      <div className="overflow-hidden mx-auto">This is home page</div>
+    <div className="overflow-hidden mx-auto">
+      <Banner></Banner>
       <Review></Review>
     </div>
   );
