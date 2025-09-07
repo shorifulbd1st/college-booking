@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import LoadingSpinner from "../Loading/LoadingSpinner";
@@ -9,9 +9,13 @@ import { PiStudentBold } from "react-icons/pi";
 import { TbMessageCircleHeart } from "react-icons/tb";
 import CountUp from "react-countup";
 import HeadingDetails from "./HeadingDetails";
+
+import { CiCalendarDate } from "react-icons/ci";
 const CollegeDetails = () => {
   const { id } = useParams();
   console.log(id);
+
+  const [isOpen, setIsOpen] = useState(false);
   const axiosPublic = useAxiosPublic();
 
   const { data: college = {}, isPending: isPending } = useQuery({
@@ -24,7 +28,7 @@ const CollegeDetails = () => {
   if (isPending) {
     return <LoadingSpinner></LoadingSpinner>;
   }
-  console.log(college);
+  console.log("college Details", college);
   const {
     _id,
     name,
@@ -45,9 +49,16 @@ const CollegeDetails = () => {
     healthCare,
     eventsDetails,
     researchPapers,
-  } = college;
+  } = college || {};
 
-  console.log(_id);
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
+
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
+
   return (
     <section className="">
       <DetailsBanner
@@ -165,7 +176,18 @@ const CollegeDetails = () => {
                     <p className="px-0 m-0">Student Nationalities</p>
                   </div>
                 </div>
-                <button class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer">
+                <div className="my-4">
+                  <button class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 flex justify-center items-center">
+                    <span className="text-3xl mr-2">
+                      <CiCalendarDate />
+                    </span>
+                    Admission Date : {admissionDate}
+                  </button>
+                </div>
+                <button
+                  onClick={() => setIsOpen(true)}
+                  class="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
+                >
                   Start your application
                 </button>
               </div>

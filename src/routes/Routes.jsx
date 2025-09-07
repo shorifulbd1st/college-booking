@@ -37,10 +37,10 @@ const router = createBrowserRouter([
         //   return { colleges };
         // },
       },
-      // {
-      //   path: "admission",
-      //   element: <Admission></Admission>,
-      // },
+      {
+        path: "admission",
+        element: <Admission></Admission>,
+      },
       {
         path: "my-college",
         element: <MyCollege></MyCollege>,

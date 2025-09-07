@@ -1,9 +1,10 @@
 import React from "react";
+import MyApplyColleges from "../MyApplyColleges/MyApplyColleges";
 
 const MyCollege = () => {
   return (
     <div>
-      <h1>MyCollege page</h1>
+      <MyApplyColleges></MyApplyColleges>
     </div>
   );
 };
