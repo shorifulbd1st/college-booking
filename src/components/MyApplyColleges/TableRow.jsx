@@ -35,6 +35,7 @@ const TableRow = ({ college }) => {
       name,
       collegeId,
       collegeImage,
+      collegeName,
       rating: form.rating.value,
       comment: form.comment.value,
       date: format(startDate, "dd/MM/yyyy"),

@@ -29,7 +29,7 @@ const MyApplyColleges = () => {
   if (isPending) {
     return <LoadingSpinner />;
   }
-  console.log(colleges);
+  // console.log(colleges);
   return (
     <div>
       <div className="container px-4 mx-auto my-10">
