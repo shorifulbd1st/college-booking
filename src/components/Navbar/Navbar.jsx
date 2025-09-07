@@ -19,7 +19,8 @@ const Navbar = () => {
               <div className="relative flex justify-center items-center">
                 <img
                   className="w-12 h-12 mr-2 rounded-full"
-                  src="https://i.ibb.co.com/6whQTLm/hotel-Rose.png"
+                  src="https://png.pngtree.com/png-vector/20201116/ourlarge/pngtree-college-icon-design-png-image_2457887.jpg"
+                  // src="https://i.ibb.co.com/6whQTLm/hotel-Rose.png"
                   alt="Hotel Rose Logo"
                   loading="lazy"
                 />

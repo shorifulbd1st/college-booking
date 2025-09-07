@@ -34,7 +34,9 @@ const Home = () => {
       <Banner></Banner>
       <TopColleges></TopColleges>
       <ImageGallery></ImageGallery>
-      <StudentResearch researchPapers={researchPapers}></StudentResearch>
+      <div className="w-11/12 mx-auto ">
+        <StudentResearch researchPapers={researchPapers}></StudentResearch>
+      </div>
       <Review></Review>
     </div>
   );
