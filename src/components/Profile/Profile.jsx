@@ -26,7 +26,7 @@ const Profile = () => {
   if (isPending) {
     return <LoadingSpinner></LoadingSpinner>;
   }
-  console.log(Data);
+  // console.log(Data);
   return (
     <div className="w-11/12 mx-auto my-8">
       <HeadingDetails

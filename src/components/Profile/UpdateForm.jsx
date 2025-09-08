@@ -28,7 +28,7 @@ const UpdateForm = ({ title, message, value, sendData, newId, refetch }) => {
   if (isPending) {
     return <LoadingSpinner />;
   }
-  console.log(college);
+  // console.log(college);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,8 +44,8 @@ const UpdateForm = ({ title, message, value, sendData, newId, refetch }) => {
       address,
       date,
     };
-    console.log("font-side", newId);
-    console.log("font-side", data);
+    // console.log("font-side", newId);
+    // console.log("font-side", data);
     axiosPublic.put(`/college-registration-update/${newId}`, data).then(() => {
       notify("success", "update successful");
       // navigate("/my-college");

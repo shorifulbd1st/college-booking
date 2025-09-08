@@ -26,7 +26,7 @@ const Admission = () => {
   }
 
   const handleOpenModal = (id) => {
-    console.log("user", user?.email);
+    // console.log("user", user?.email);
     if (!user) {
       navigate("/login");
       return;

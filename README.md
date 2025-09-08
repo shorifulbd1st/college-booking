@@ -148,7 +148,7 @@ With a **user-friendly interface**, robust authentication, and responsive design
 
    ```bash
    git clone https://github.com/shorifulbd1st/college-booking-server
-   cd Body-Build-Sever
+   cd college-booking-server
    ```
 
 2. Install dependencies:

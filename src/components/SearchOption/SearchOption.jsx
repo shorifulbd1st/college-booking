@@ -4,7 +4,7 @@ import { IoSearchCircleOutline, IoSearchOutline } from "react-icons/io5";
 const SearchOption = ({ colleges }) => {
   const [college, setCollege] = useState(colleges);
   const [inputValue, setInputValue] = useState("");
-  console.log(college[0].name);
+  // console.log(college[0].name);
   useEffect(() => {
     const searchResult = [...college].filter((item) =>
       item.name.toLowerCase().includes(inputValue.toLowerCase())

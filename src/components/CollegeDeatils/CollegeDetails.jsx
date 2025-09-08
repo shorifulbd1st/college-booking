@@ -16,7 +16,7 @@ import HealthCare from "./HealthCare";
 import CampusLife from "./CampusLife";
 const CollegeDetails = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const [isOpen, setIsOpen] = useState(false);
   const axiosPublic = useAxiosPublic();
@@ -31,7 +31,7 @@ const CollegeDetails = () => {
   if (isPending) {
     return <LoadingSpinner></LoadingSpinner>;
   }
-  console.log("college Details", college);
+  // console.log("college Details", college);
   const {
     _id,
     name,
