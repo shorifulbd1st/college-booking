@@ -1,7 +1,7 @@
 <div align="center">
- <h1>🎓 College Booking System</h1>
+ <h1>🎓 Campus Hub</h1>
   <a href="https://college-booking-fafe3.firebaseapp.com" target="_blank">
-    <img src="https://i.ibb.co.com/TMtXwGHc/localhost-5173.png" width="400px" alt="College Booking System"/> 
+    <img src="https://i.ibb.co.com/qMBdwJxW/college-booking-fafe3-firebaseapp-com.png" width="400px" alt="Campus Hub"/> 
   </a>
 </div>
 
