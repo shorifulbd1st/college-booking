@@ -10,6 +10,7 @@ import MyCollege from "../components/MyCollege/MyCollege";
 import CollegeDetails from "../components/CollegeDeatils/CollegeDetails";
 import PrivateRoute from "./PrivateRoute";
 import Profile from "../components/Profile/Profile";
+import SearchPage from "../components/CollegeSearch/SearchPage";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             <Profile></Profile>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/search",
+        element: <SearchPage></SearchPage>,
       },
     ],
   },
