@@ -2,7 +2,7 @@ import React from "react";
 import HeadingDetails from "../CollegeDeatils/HeadingDetails";
 import ApplyRow from "./ApplyRow";
 
-const ApplyCollege = ({ colleges }) => {
+const ApplyCollege = ({ colleges, refetch }) => {
   return (
     <div>
       {colleges.length >= 1 && (
@@ -73,29 +73,6 @@ const ApplyCollege = ({ colleges }) => {
                             </button>
                           </th>
 
-                          {/* <th
-                        scope="col"
-                        className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                      >
-                        <button className="flex items-center gap-x-2">
-                          <span></span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            className="w-4 h-4"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-                            />
-                          </svg>
-                        </button>
-                      </th> */}
-
                           <th
                             scope="col"
                             className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
@@ -118,7 +95,11 @@ const ApplyCollege = ({ colleges }) => {
                       <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                         {colleges &&
                           colleges.map((college, idx) => (
-                            <ApplyRow key={idx} college={college}></ApplyRow>
+                            <ApplyRow
+                              key={idx}
+                              college={college}
+                              refetch={refetch}
+                            ></ApplyRow>
                           ))}
                       </tbody>
                     </table>

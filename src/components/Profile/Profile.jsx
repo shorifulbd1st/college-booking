@@ -11,7 +11,11 @@ import ApplyCollege from "./ApplyCollege";
 const Profile = () => {
   const { user, notify } = useContext(AuthContext);
   const axiosPublic = useAxiosPublic();
-  const { data: Data = [], isPending: isPending } = useQuery({
+  const {
+    data: Data = [],
+    isPending: isPending,
+    refetch,
+  } = useQuery({
     queryKey: ["profile"],
     queryFn: async () => {
       const res = await axiosPublic.get(`/profile/${user?.email}`);
@@ -51,36 +55,46 @@ const Profile = () => {
             <p>
               <strong>Email : </strong> {Data.profile.email}
             </p>
-            <p>
-              <strong>Phone : </strong> {Data.colleges[0].phone}
-            </p>{" "}
-            <p>
-              <strong>Address : </strong> {Data.colleges[0].address}
-            </p>
+
             <div>
-              <strong>Applied Colleges </strong>
-              {Data.colleges.map((college, i) => (
-                <ul key={i} className="lg:ml-10 mb-5">
-                  <li>
-                    <strong>College Name:</strong> {college.collegeName}
-                  </li>
-                  <li>
-                    <strong>Subject : </strong>
-                    {college.subject}
-                  </li>
-                  <li>
-                    <strong>Apply Date: </strong>
-                    {college.date}
-                  </li>
-                </ul>
-              ))}
+              {Data.colleges.length > 0 && (
+                <div>
+                  <p>
+                    <strong>Phone : </strong> {Data?.colleges[0].phone}
+                  </p>
+                  <p>
+                    <strong>Address : </strong> {Data?.colleges[0].address}
+                  </p>
+                  <div>
+                    <strong>Applied Colleges </strong>
+                    {Data.colleges.map((college, i) => (
+                      <ul key={i} className="lg:ml-10 mb-5">
+                        <li>
+                          <strong>College Name:</strong> {college.collegeName}
+                        </li>
+                        <li>
+                          <strong>Subject : </strong>
+                          {college.subject}
+                        </li>
+                        <li>
+                          <strong>Apply Date: </strong>
+                          {college.date}
+                        </li>
+                      </ul>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
-      {Data.colleges.length >= 0 && (
+      {Data?.colleges?.length >= 0 && (
         <section>
-          <ApplyCollege colleges={Data.colleges}></ApplyCollege>
+          <ApplyCollege
+            colleges={Data.colleges}
+            refetch={refetch}
+          ></ApplyCollege>
         </section>
       )}
     </div>

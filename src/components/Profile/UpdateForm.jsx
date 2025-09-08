@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AuthContext } from "../../providers/AuthProvider";
 import { RxCross2 } from "react-icons/rx";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { format } from "date-fns";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { AuthContext } from "../../providers/AuthProvider";
 import LoadingSpinner from "../Loading/LoadingSpinner";
 
-const ApplicationForm = ({ title, message, value, sendData, newId }) => {
+const UpdateForm = ({ title, message, value, sendData, newId, refetch }) => {
   const axiosPublic = useAxiosPublic();
   const [startDate, setStartDate] = useState(new Date());
   const { user, notify } = useContext(AuthContext);
@@ -28,33 +28,28 @@ const ApplicationForm = ({ title, message, value, sendData, newId }) => {
   if (isPending) {
     return <LoadingSpinner />;
   }
-  // console.log(college);
+  console.log(college);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const email = user?.email;
-    const name = user?.displayName;
     const date = format(startDate, "dd/MM/yyyy");
     const subject = form.subject.value;
     const phone = form.phoneNumber.value;
     const address = form.address.value;
 
     const data = {
-      name,
-      email,
       subject,
       phone,
       address,
       date,
-      collegeId: college?._id,
-      collegeName: college?.name,
-      collegeImage: college?.image,
     };
-
-    axiosPublic.post("/college-registration", data).then(() => {
-      notify("success", { message });
-      navigate("/my-college");
+    console.log("font-side", newId);
+    console.log("font-side", data);
+    axiosPublic.put(`/college-registration-update/${newId}`, data).then(() => {
+      notify("success", "update successful");
+      // navigate("/my-college");
+      refetch();
     });
     sendData(false);
   };
@@ -195,4 +190,4 @@ const ApplicationForm = ({ title, message, value, sendData, newId }) => {
   );
 };
 
-export default ApplicationForm;
+export default UpdateForm;

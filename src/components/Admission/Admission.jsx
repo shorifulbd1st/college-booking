@@ -63,6 +63,8 @@ const Admission = () => {
       {/* Modal */}
       {isOpen && (
         <ApplicationForm
+          title={"Admission Registration Form"}
+          message={"Your Registration Successful"}
           value={isOpen}
           sendData={handleCloseModal}
           newId={selectedId}

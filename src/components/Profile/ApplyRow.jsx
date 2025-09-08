@@ -8,9 +8,19 @@ import { AuthContext } from "../../providers/AuthProvider";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { GrUpdate } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
-const ApplyRow = ({ college }) => {
+
+import Swal from "sweetalert2";
+import { toast } from "react-toastify";
+import axios from "axios";
+import ApplicationForm from "../ApplicationForm/ApplicationForm";
+import UpdateForm from "./UpdateForm";
+
+const ApplyRow = ({ college, refetch }) => {
   const { user, notify } = useContext(AuthContext);
   const [isReviewOpen, setIsReviewOpen] = useState(false);
+
+  const [selectedId, setSelectedId] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
   const axiosPublic = useAxiosPublic();
   const navigate = useNavigate();
@@ -48,6 +58,43 @@ const ApplyRow = ({ college }) => {
       // navigate("/my-college");
     });
     setIsReviewOpen(false);
+  };
+
+  const handleOpenModal = (id) => {
+    // console.log("user", user?.email);
+    // console.log(id);
+    setSelectedId(id);
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedId(null);
+    setIsOpen(false);
+  };
+
+  const handleDelete = (id) => {
+    // console.log(id)
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        // console.log(id)
+        await axios.post(
+          `${import.meta.env.VITE_API_URL}/delete-apply-college/${id}`
+        );
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success",
+        });
+      }
+    });
   };
 
   return (
@@ -88,7 +135,7 @@ const ApplyRow = ({ college }) => {
             Review
           </button>
           <button
-            // onClick={openModal}
+            onClick={() => handleOpenModal(_id)}
             className="flex cursor-pointer items-center px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-80"
           >
             <span className="mr-2">Update</span>
@@ -103,7 +150,7 @@ const ApplyRow = ({ college }) => {
             Details
           </Link>
           <button
-            // onClick={() => handleDelete(room._id, roomId)}
+            onClick={() => handleDelete(_id)}
             className="flex cursor-pointer items-center px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80"
           >
             <span className="mr-2">Cancel</span>
@@ -194,6 +241,16 @@ const ApplyRow = ({ college }) => {
               </form>
             </div>
           </div>
+        )}
+        {isOpen && (
+          <UpdateForm
+            title={"Update Your Admission Registration Form"}
+            message={"Update Your Admission Successful"}
+            value={isOpen}
+            sendData={handleCloseModal}
+            newId={selectedId}
+            refetch={refetch}
+          />
         )}
       </td>
     </tr>
