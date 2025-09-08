@@ -85,9 +85,10 @@ const ApplyRow = ({ college, refetch }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         // console.log(id)
-        await axios.post(
+        await axios.delete(
           `${import.meta.env.VITE_API_URL}/delete-apply-college/${id}`
         );
+        refetch();
         Swal.fire({
           title: "Deleted!",
           text: "Your file has been deleted.",
