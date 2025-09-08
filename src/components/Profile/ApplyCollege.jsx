@@ -1,61 +1,17 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
-import { GrUpdate } from "react-icons/gr";
-import { MdDelete } from "react-icons/md";
-import { MdRateReview } from "react-icons/md";
-import Swal from "sweetalert2";
-import DatePicker from "react-datepicker";
-import { Helmet } from "react-helmet";
-import "react-datepicker/dist/react-datepicker.css";
-import TableRow from "./TableRow";
-import { AuthContext } from "../../providers/AuthProvider";
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
-import LoadingSpinner from "../Loading/LoadingSpinner";
+import React from "react";
 import HeadingDetails from "../CollegeDeatils/HeadingDetails";
-import { Link } from "react-router-dom";
-const MyApplyColleges = () => {
-  // console.log('booking rooms', bookingRooms)
-  const { user } = useContext(AuthContext);
-  // console.log(user?.email);
-  const axiosPublic = useAxiosPublic();
-  const { data: colleges = [], isPending } = useQuery({
-    queryKey: ["colleges", user?.email],
-    queryFn: async () => {
-      const res = await axiosPublic.get(`/colleges/${user?.email}`);
-      return res.data;
-    },
-    // enabled: user?.email,
-  });
+import ApplyRow from "./ApplyRow";
 
-  if (isPending) {
-    return <LoadingSpinner />;
-  }
-  // console.log(colleges);
+const ApplyCollege = ({ colleges }) => {
   return (
     <div>
-      {colleges.length === 0 && (
-        <div className="w-11/12 mx-auto my-8 flex flex-col gap-6 justify-center items-center">
-          <HeadingDetails
-            title="No Applications Yet!"
-            subtitle="You haven't applied to any colleges yet. Start your journey today by selecting your favorite institutions and submit your application now."
-          ></HeadingDetails>
-          <Link
-            // onClick={() => setIsOpen(true)}
-            to="/admission"
-            class="text-center px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 cursor-pointer"
-          >
-            Start your application
-          </Link>
-        </div>
-      )}
       {colleges.length >= 1 && (
         <div className="-mt-5">
           <div className="container px-4 mx-auto my-10">
             <HeadingDetails
-              title="Application History"
+              title={"Manage Your Applications"}
               subtitle={
-                "Stay updated with every college you’ve applied to. Check details, review your choices, and ensure nothing is missed."
+                "Easily update or delete your applications whenever needed, ensuring you stay in full control of your college admission process."
               }
             ></HeadingDetails>
             <div className="flex items-center gap-x-3">
@@ -162,12 +118,7 @@ const MyApplyColleges = () => {
                       <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
                         {colleges &&
                           colleges.map((college, idx) => (
-                            <TableRow
-                              key={idx}
-                              college={college}
-                              // setBookingRooms={setBookingRooms}
-                              // allBookingRoom={allBookingRoom}
-                            ></TableRow>
+                            <ApplyRow key={idx} college={college}></ApplyRow>
                           ))}
                       </tbody>
                     </table>
@@ -182,4 +133,4 @@ const MyApplyColleges = () => {
   );
 };
 
-export default MyApplyColleges;
+export default ApplyCollege;

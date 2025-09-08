@@ -19,7 +19,7 @@ const HeadingDetails = ({ title, subtitle }) => {
       </div>
 
       {/* Subtitle */}
-      <p className="mt-3 text-gray-600 font-semibold lg:w-8/12 mx-auto">
+      <p className="mt-3 text-gray-600 font-semibold lg:w-7/12 mx-auto">
         {subtitle}
       </p>
 

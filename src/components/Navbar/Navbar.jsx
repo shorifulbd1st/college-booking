@@ -163,7 +163,7 @@ const Navbar = () => {
               <div className="flex cursor-pointer items-center mt-4 lg:mt-0 lg:ml-6 gap-3">
                 {user && user?.email ? (
                   <div className="flex items-center gap-3">
-                    <a id="not-clickable">
+                    <Link to={"/profile"} id="not-clickable">
                       <div className=" w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
                         <img
                           referrerPolicy="no-referrer"
@@ -172,7 +172,7 @@ const Navbar = () => {
                           alt="avatar"
                         />
                       </div>
-                    </a>
+                    </Link>
                     <Tooltip anchorSelect="#not-clickable">
                       <div className="px-2 py-1 rounded text-sm cursor-pointer">
                         {user?.displayName}

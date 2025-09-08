@@ -9,6 +9,7 @@ import Admission from "../components/Admission/Admission";
 import MyCollege from "../components/MyCollege/MyCollege";
 import CollegeDetails from "../components/CollegeDeatils/CollegeDetails";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../components/Profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,19 @@ const router = createBrowserRouter([
       },
       {
         path: "college-details/:id",
-        element: <CollegeDetails></CollegeDetails>,
+        element: (
+          <PrivateRoute>
+            <CollegeDetails></CollegeDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
     ],
   },
