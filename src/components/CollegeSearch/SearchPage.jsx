@@ -4,13 +4,14 @@ import { useQuery } from "@tanstack/react-query";
 import College from "../college/college";
 import LoadingSpinner from "../Loading/LoadingSpinner";
 import { useEffect } from "react";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const SearchPage = () => {
   const [params] = useSearchParams();
   const query = params.get("query") || "";
-  console.log(query);
+  // console.log(query);
   const navigate = useNavigate();
-
+  const axiosPublic = useAxiosPublic();
   useEffect(() => {
     if (query.length === 0) {
       navigate("/");
@@ -18,12 +19,18 @@ const SearchPage = () => {
   }, [query.length, navigate]);
   const { data: colleges = [], isLoading } = useQuery({
     queryKey: ["colleges", query],
+    // queryFn: async () => {
+    //   const res = await fetch(
+    //     `http://localhost:5000/colleges-search?search=${query}`
+    //   );
+    //   return res.json();
+    // },
+
     queryFn: async () => {
-      const res = await fetch(
-        `http://localhost:5000/colleges-search?search=${query}`
-      );
-      return res.json();
+      const res = await axiosPublic.get(`colleges-search?search=${query}`);
+      return res.data;
     },
+
     enabled: !!query,
   });
 
@@ -31,9 +38,7 @@ const SearchPage = () => {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl mb-4">
-        {/* Search Results for: <span className="font-bold">{query}</span> */}
-      </h2>
+      <h2 className="text-2xl mb-4"></h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {colleges.length > 0 ? (
           colleges?.map((college) => (
@@ -42,7 +47,6 @@ const SearchPage = () => {
         ) : (
           <p className="my-20 text-2xl text-red-800 italic font-bold text-center">
             No colleges found
-            {/* {colleges.length === 0 && navitage("/")} */}
           </p>
         )}
       </div>

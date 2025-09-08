@@ -41,8 +41,8 @@ const Navbar = () => {
                   alt="Hotel Rose Logo"
                   loading="lazy"
                 />
-                <h1 className="text-2xl font-extrabold text-white">
-                  College Booking System
+                <h1 className="text-2xl italic font-extrabold text-white">
+                  Campus Hub
                 </h1>
               </div>
 
@@ -149,32 +149,6 @@ const Navbar = () => {
                 </NavLink>
               </div>
 
-              {/* Search Box */}
-              {/* <div className="relative mt-4 lg:mt-0 lg:ml-6 text-white">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                  <svg
-                    className="w-5 h-5 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M21 21L15 15M17 10C17 13.866 13.866 17 10 
-                      17C6.13401 17 3 13.866 3 10C3 6.13401 
-                      6.13401 3 10 3C13.866 3 17 6.13401 
-                      17 10Z"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="w-full lg:w-64 py-2 pl-10 pr-4 rounded-lg border focus:ring focus:ring-blue-300 focus:outline-none"
-                />
-              </div> */}
               <CollegeSearch colleges={colleges}></CollegeSearch>
               {/* User Actions */}
               <div className="flex cursor-pointer items-center mt-4 lg:mt-0 lg:ml-6 gap-3">

@@ -9,7 +9,7 @@ const ApplyCollege = ({ colleges, refetch }) => {
         <div className="-mt-5">
           <div className="container px-4 mx-auto my-10">
             <HeadingDetails
-              title={"Manage Your Applications"}
+              title={"Your Applications"}
               subtitle={
                 "Easily update or delete your applications whenever needed, ensuring you stay in full control of your college admission process."
               }
