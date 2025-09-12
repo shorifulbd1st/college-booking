@@ -53,7 +53,7 @@ const ApplicationForm = ({ title, message, value, sendData, newId }) => {
     };
 
     axiosPublic.post("/college-registration", data).then(() => {
-      notify("success", { message });
+      notify("success", "Your registration successful");
       navigate("/my-college");
     });
     sendData(false);

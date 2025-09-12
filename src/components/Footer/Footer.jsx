@@ -45,10 +45,30 @@ const Footer = () => {
         <div className="md:w-1/3">
           <h3 className="text-xl font-semibold text-green-500">Explore</h3>
           <ul className="mt-4 flex flex-col space-y-2 text-gray-400">
-            <Link to={"/"}>Home</Link>
-            <Link to={"/colleges"}>Colleges</Link>
-            <Link to={"/admission"}>Admission</Link>
-            <Link to={"my-college"}>My College</Link>
+            <Link
+              className="hover:underline underline-offset-2 decoration-red-600"
+              to={"/"}
+            >
+              Home
+            </Link>
+            <Link
+              className="hover:underline underline-offset-2 decoration-red-600"
+              to={"/colleges"}
+            >
+              Colleges
+            </Link>
+            <Link
+              className="hover:underline underline-offset-2 decoration-red-600"
+              to={"/admission"}
+            >
+              Admission
+            </Link>
+            <Link
+              className="hover:underline underline-offset-2 decoration-red-600"
+              to={"my-college"}
+            >
+              My College
+            </Link>
           </ul>
         </div>
 

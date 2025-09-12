@@ -12,11 +12,12 @@ const NewSlider = ({ images }) => {
           showArrows={false}
           showStatus={false}
           showThumbs={false}
-          interval={1500}
+          interval={2500}
         >
           {images.map((image, index) => (
             <div key={index}>
               <img
+                referrerPolicy="no-referrer"
                 className="w-full h-[28rem] object-cover object-fit object-center"
                 src={image.src}
                 alt={image.alt}
