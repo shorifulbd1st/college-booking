@@ -9,7 +9,7 @@
 
 ## 📜 Project Overview
 
-Welcome to **College Booking System** 🎓, a MERN stack-based web platform where users can explore colleges, view detailed admission processes, research work, events, and sports facilities. The system also allows students to apply for admission, manage their booked colleges, and share reviews.
+Welcome to **Campus Hub** 🎓, a MERN stack-based web platform where users can explore colleges, view detailed admission processes, research work, events, and sports facilities. The system also allows students to apply for admission, manage their booked colleges, and share reviews.
 
 With a **user-friendly interface**, robust authentication, and responsive design, the platform ensures a smooth experience for students looking to explore and book college facilities. 🚀
 
